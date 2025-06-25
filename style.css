@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+--Red: rgb(255, 98, 87);
+--Blu800: rgb(36, 39, 66);
+--Blue700: rgb(54, 56, 78);
+--Grey: rgb(148, 148, 148);
+--White: rgb(255, 255, 255);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "roboto", "san-serif";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background-color: var(--Blue700);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    max-width: 928px;
+    padding: 2rem;
+    font-size: 1.6rem;
+    border-radius: 3.2rem;
+    box-shadow: 0 2rem 4.8rem rgba(36, 39, 66, 50%);
+    gap: 2rem;
+}
+
+.formContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.4rem;
+    gap: 2rem;
+    color: var(--Blu800);
+}
+
+.formContainer p {
+    line-height: 2.4rem;
+}
+
+h1 {
+    color: var(--Blu800);
+    font-size: 5.6rem;
+}
+
+.formContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.formContainer li {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.formContainer svg {
+    min-width: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+}
+
+form .labelContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+form label {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+form .labelError {
+    color: var(--Red);
+}
+
+form input {
+    border: 1px solid var(--Grey);
+    height: 5.6rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+    color: var(--Blu800);
+}
+
+form input:focus{
+    outline: none;
+    border: 1px solid var(--Blu800);
+}
+
+form input::placeholder {
+    color: var(--Grey);
+}
+
+.inputError {
+    background-color: #FFE8E6;
+    border: 1px solid var(--Red);
+    color: var(--Red);
+}
+
+.inputError::placeholder {
+    color: var(--Red);
+}
+
+button {
+    background-image: linear-gradient(90deg, var(--Blu800), var(--Blu800));
+    color: var(--White);
+    height: 5.6rem;
+    border-radius: 1rem;
+    border: 0 none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all;
+    transition-duration: 100ms;
+}
+
+button:hover {
+    background-image: linear-gradient(90deg, #FF537B, #F06F4B);
+    box-shadow: 0 1.6rem 3rem rgba(240, 111, 75, 40%);
+}
+
+.dialogue {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    padding: 6.4rem;
+    font-size: 1.6rem;
+    border-radius: 3.2rem;
+    box-shadow: 0 2rem 4.8rem rgba(36, 39, 66, 50%);
+    gap: 3.2rem;
+    color: var(--Blu800);
+}
+
+.dialogue span {
+    font-weight: 700;
+}
+
+.dialogue button {
+    margin-top: 1.6rem;
+}
+
+.attribution {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    translate: -50%;
+}
+
+.attribution a {
+    color: var(--Red);
+}
+
+@media (max-width: 768px){
+    main {
+        flex-direction: column-reverse;
+        gap: 0;
+        padding-bottom: 0;
+        width: 100%;
+        max-width: 55rem;
+    }
+
+    button {
+        margin-bottom: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    .attribution {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+
+    body {
+        display: block;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        background-color: none;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 4.2rem;
+    }
+
+    .dialogue {
+        display: flex;
+        width: 100%;
+        box-shadow: none;
+        height: 100vh;
+        padding: 0 2.4rem;
+        justify-content: center;
+    }
+
+    .dialogue h1 {
+        font-size: 4.2rem;
+    }
+
+    .dialogue button {
+        position: absolute;
+        width: calc(100% - 48px);
+        bottom: 24px;
+        
+    }
+
+    .formContainer {
+        padding: 3.2rem 2.4rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
